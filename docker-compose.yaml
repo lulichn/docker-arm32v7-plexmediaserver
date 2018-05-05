@@ -1,0 +1,6 @@
+version: "2"
+services:
+  pms:
+    image: lulichn/pms:latest
+    network_mode: "host"
+    restart: always
