@@ -1,5 +1,5 @@
 FROM arm32v7/busybox as builder
-ENV URL="https://downloads.plex.tv/plex-media-server/1.12.3.4973-215c28d86/PlexMediaServer-1.12.3.4973-215c28d86-arm7.spk"
+ENV URL="http://downloads.plex.tv/plex-media-server/1.12.3.4973-215c28d86/PlexMediaServer-1.12.3.4973-215c28d86-arm7.spk"
 RUN wget $URL -O /tmp/pms.spk \
 	&& mkdir -p /usr/lib/plexmediaserver \
 	&& tar -xOf /tmp/pms.spk package.tgz | tar -xzf - -C /usr/lib/plexmediaserver/
